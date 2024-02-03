@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Partage de connaissance</h1>
+    {% block content %}{% endblock %}
+    {% if user.is_authenticated %} 
+        <p> Vous etes connecte en tant que {{ request.user }}. <a href="{% url 'logout' %}">
+            Se deconnecter
+            
+        </a></p>http://127.0.0.1:8000/
+
+    {% endif %}
+
+</body>
+</html>
